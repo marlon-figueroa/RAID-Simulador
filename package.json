@@ -1,0 +1,26 @@
+{
+  "name": "raid-simulador",
+  "version": "1.0.6",
+  "description": "A RAID calculator for RAID 0, RAID 1, RAID 5, RAID 6, RAID 10, RAID 50, RAID51 RAID 60, RAID 61, RAID 5E and RAID 5EE",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "build": "gulp build",
+    "dev": "gulp dev",
+    "watch": "gulp watch"
+  },
+  "author": "Marlon Figueroa",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.2.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-terser": "^1.2.0"
+  },
+  "dependencies": {
+    "bootstrap-icons": "^1.9.1",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20",
+    "raid-calculator": "^1.0.6"
+  }
+}
