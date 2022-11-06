@@ -60,7 +60,7 @@
             <li class="list-group-item d-none" id="raid-box">
                 <div class="row">
                     <div class="col-sm-4">
-                        <label class="sr-only" for="raid">RAID Level</label>
+                        <label class="sr-only" for="raid">Nivel RAID</label>
                         <select class="form-select mb-1" id="raid">
                             <option value="0">RAID 0</option>
                             <option value="1">RAID 1</option>
@@ -76,40 +76,44 @@
                     </div>
                     <div class="col-sm">
                         <div id="raid5error" class="alert alert-warning font-weight-bold text-center raid-error d-none">
-                            The minimum number of disks in a RAID 5 set is 3.
+                            El número mínimo de discos en un RAID 5 es 3.
                         </div>
                         <div id="raid6error" class="alert alert-warning font-weight-bold text-center raid-error d-none">
-                            The minimum number of disks in a RAID 6 set is 4.
+                            El número mínimo de discos en un RAID 6 es 4.
                         </div>
                         <div id="raid10error" class="alert alert-warning font-weight-bold text-center raid-error d-none">
-                            The minimum number of disks in a RAID 10 set is 4 and it must be an even number.
+                            El número mínimo de discos en un RAID 10 es 4 y debe ser un número par.
                         </div>
                         <div id="raid50error" class="alert alert-warning font-weight-bold text-center raid-error d-none">
-                            The minimum number of disks in a RAID 50 set is 6 and it must be an even number.
+                            El número mínimo de discos en un RAID 50 es 6 y debe ser un número par.
                         </div>
                         <div id="raid60error" class="alert alert-warning font-weight-bold text-center raid-error d-none">
-                            The minimum number of disks in a RAID 60 set is 8.
+                            El número mínimo de discos en un RAID 60 es 8.
                         </div>
                         <div id="raid5Eerror" class="alert alert-warning font-weight-bold text-center raid-error d-none">
-                            The minimum number of disks in a RAID 5E set is 4.
+                            El número mínimo de discos en un RAID 5E es 4.
                         </div>
                         <div id="raid51error" class="alert alert-warning font-weight-bold text-center raid-error d-none">
-                            The minimum number of disks in a RAID 51 set is 6 and it must be an even number.
+                            El número mínimo de discos en un RAID 51 es 6 y debe ser un número par.
                         </div>
                         <div id="raid61error" class="alert alert-warning font-weight-bold text-center raid-error d-none">
-                            The minimum number of disks in a RAID 61 set is 8 and it must be an even number.
+                            El número mínimo de discos en un RAID 61 es 8 y debe ser un número par.
                         </div>
                         <div id="showCalc">
+						
+							
+						
+						
                             <div class="alert alert-success">
-                                Available disk space:<br class="d-sm-none">
+                                Espacio disponible en disco:<br class="d-sm-none">
                                 <span id="storage" class="font-weight-bold"></span>
                             </div>
                             <div class="alert alert-info">
-                                Parity/Protection:<br class="d-sm-none">
+                                Paridad/Protección:<br class="d-sm-none">
                                 <span id="parity" class="font-weight-bold"></span>
                             </div>
                             <div class="alert alert-warning">
-                                Unused disk space:<br class="d-sm-none">
+                                Espacio en disco no utilizado:<br class="d-sm-none">
                                 <span id="unused" class="font-weight-bold"></span>
                             </div>
                         </div>
