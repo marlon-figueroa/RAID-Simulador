@@ -7,6 +7,7 @@ $('.add-drive').click(function(){
     $(server).append('<button type="text" readonly class="'+btn_class+'" value="'+ size +'">'+ prefix + size + suffix + '</button>');
     RaidCalculate()
 });
+
 $(document).on('click', '.this-drive', function () {
     $(this).closest('button').remove();
     RaidCalculate()
@@ -162,6 +163,7 @@ function RaidCalculate() {
             break;
     }
 }
+
 $('#raid').on('input', function(){
     RaidCalculate();
 });
