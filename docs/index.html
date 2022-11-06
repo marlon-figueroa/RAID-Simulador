@@ -28,7 +28,7 @@
             <h1 class="h5 mb-0">SIMULADOR RAID</h1>
         </div>
         <ul class="list-group list-group-flush">
-            <li class="list-group-item text-center">
+            <li class="list-group-item text-center bg-info">
                 <div class="font-weight-bold">Agregar discos duros</div>
                 <button class="add-drive btn btn-hdd btn-dark m-2" id="16" role="button"><span class="small">16TB</span> <i class="bi bi-hdd-rack"></i></button>
                 <button class="add-drive btn btn-hdd btn-dark m-2" id="14" role="button"><span class="small">14TB</span> <i class="bi bi-hdd-rack"></i></button>
@@ -64,14 +64,16 @@
                         <select class="form-select mb-1" id="raid">
                             <option value="0">RAID 0</option>
                             <option value="1">RAID 1</option>
+                            <option value="3">RAID 3</option>
                             <option value="5">RAID 5</option>
-                            <option value="6">RAID 6</option>
+                            <!-- <option value="6">RAID 6</option> -->
+                            <option value="01">RAID 01</option>
                             <option value="10">RAID 10</option>
-                            <option value="50">RAID 50</option>
-                            <option value="51">RAID 51</option>
-                            <option value="60">RAID 60</option>
-                            <option value="61">RAID 61</option>
-                            <option value="5E">RAID 5E/5EE</option>
+                            <!-- <option value="50">RAID 50</option> -->
+                            <!-- <option value="51">RAID 51</option> -->
+                            <!-- <option value="60">RAID 60</option> -->
+                            <!-- <option value="61">RAID 61</option> -->
+                            <!-- <option value="5E">RAID 5E/5EE</option> -->
                         </select>
                     </div>
                     <div class="col-sm">
@@ -101,10 +103,31 @@
                         </div>
                         <div id="showCalc">
 						
-							
+							<table class="table table-hover">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">Criterio</th>
+                                    <th scope="col">Valor</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th>Espacio disponible en disco</th>
+                                    <td class="text-center"><button class="btn btn-hdd btn-success m-2" role="button"><span class="small"><span id="storage"></span></span> <i class="bi bi-hdd-rack"></i></button></td>
+                                  </tr>
+                                  <tr>
+                                    <th>Paridad/Protección</th>
+                                    <td class="text-center"><button class="btn btn-hdd btn-info m-2" role="button"><span class="small"><span id="parity"></span></span> <i class="bi bi-hdd-rack"></i></button></td>
+                                  </tr>
+                                  <tr>
+                                    <th>Espacio en disco no utilizado</th>
+                                    <td class="text-center"><button class="btn btn-hdd btn-danger m-2" role="button"><span class="small"><span id="unused"></span></span> <i class="bi bi-hdd-rack"></i></button></td>
+                                  </tr>
+                                </tbody>
+                            </table>
 						
 						
-                            <div class="alert alert-success">
+                            <!-- <div class="alert alert-success">
                                 Espacio disponible en disco:<br class="d-sm-none">
                                 <span id="storage" class="font-weight-bold"></span>
                             </div>
@@ -115,15 +138,15 @@
                             <div class="alert alert-warning">
                                 Espacio en disco no utilizado:<br class="d-sm-none">
                                 <span id="unused" class="font-weight-bold"></span>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
             </li>
         </ul>
-        <div class="card-footer text-center">
+        <!-- <div class="card-footer text-center">
             <a href="https://github.com/NormanHuth/RAID-Calculator"><i class="fab fa-github"></i> Simulador RAID en Github</a>
-        </div>
+        </div> -->
     </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
