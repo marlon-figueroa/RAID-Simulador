@@ -94,6 +94,16 @@ function RaidCalculate() {
                 $(el3).text(unused+" TB");
             }
             break;
+        case '01':
+            if(match < 4 || m0!==m1) {
+                $("#raid01error").removeClass("d-none");
+                $(showCalc).addClass("d-none");
+            } else {
+                $(el1).text((i*lowest)/2+" TB");
+                $(el2).text((i*lowest)/2+" TB");
+                $(el3).text(sum-(i*lowest)+" TB");
+            }
+            break;
         case '10':
             if(match < 4 || m0!==m1) {
                 $("#raid10error").removeClass("d-none");
