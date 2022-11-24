@@ -82,18 +82,6 @@ function RaidCalculate() {
                 $(el3).text(unused+" TB");
             }
             break;
-        case '6':
-            if(match < 4) {
-                $("#raid6error").removeClass("d-none");
-                $(showCalc).addClass("d-none");
-            } else {
-                let use = i-2;
-                $(el1).text(use*lowest+" TB");
-                $(el2).text(2*lowest+" TB");
-                let unused = sum-(i*lowest);
-                $(el3).text(unused+" TB");
-            }
-            break;
         case '01':
             if(match < 4 || m0!==m1) {
                 $("#raid01error").removeClass("d-none");
@@ -111,63 +99,6 @@ function RaidCalculate() {
             } else {
                 $(el1).text((i*lowest)/2+" TB");
                 $(el2).text((i*lowest)/2+" TB");
-                $(el3).text(sum-(i*lowest)+" TB");
-            }
-            break;
-        case '50':
-            if(match < 6) {
-                $("#raid50error").removeClass("d-none");
-                $(showCalc).addClass("d-none");
-            } else {
-                let use = (i-2)*lowest;
-                $(el1).text(use+" TB");
-                let par = lowest*2;
-                $(el2).text(par+" TB");
-                $(el3).text(sum-(i*lowest)+" TB");
-            }
-            break;
-        case '51':
-            if(match < 6 || m0!==m1) {
-                $("#raid51error").removeClass("d-none");
-                $(showCalc).addClass("d-none");
-            } else {
-                let j = i/2;
-                let use = (j-1)*lowest;
-                $(el1).text(use+" TB");
-                $(el2).text((i*lowest)-use+" TB");
-                $(el3).text(sum-(i*lowest)+" TB");
-            }
-            break;
-        case '60':
-            if(match < 8) {
-                $("#raid60error").removeClass("d-none");
-                $(showCalc).addClass("d-none");
-            } else {
-                $(el1).text((i-4)*lowest+" TB");
-                $(el2).text(4*lowest+" TB");
-                $(el3).text(sum-(i*lowest)+" TB");
-            }
-            break;
-        case '61':
-            if(match < 8 || m0!==m1) {
-                $("#raid61error").removeClass("d-none");
-                $(showCalc).addClass("d-none");
-            } else {
-                let k = i/2;
-                let use61 = k-2;
-                $(el1).text(use61*lowest+" TB");
-                $(el2).text((i-use61)*lowest+" TB");
-                let unused = sum-(i*lowest);
-                $(el3).text(unused+" TB");
-            }
-            break;
-        case '5E':
-            if(match < 4) {
-                $("#raid5Eerror").removeClass("d-none");
-                $(showCalc).addClass("d-none");
-            } else {
-                $(el1).text((i-2)*lowest+" TB");
-                $(el2).text(2*lowest+" TB");
                 $(el3).text(sum-(i*lowest)+" TB");
             }
             break;
